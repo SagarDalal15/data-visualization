@@ -81,7 +81,7 @@ mongoose.connection.once("open", () => {
   console.log("Mongodb connection established successfully");
 });
 
-app.get(process.env.PORT + "/", (req, res) => {
+app.get("/", (req, res) => {
   //my code start
   const client = new MongoClient(url, {
     useNewUrlParser: true,
