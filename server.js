@@ -7,6 +7,21 @@ var MongoClient = require("mongodb").MongoClient;
 
 const PORT = process.env.PORT || 4000;
 
+// My code start
+
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+  res.end("<h1>Hello World</h1>");
+});
+
+server.listen(PORT, () => {
+  console.log(`Server running at port ` + port);
+});
+//My code ends
+
 //My code start 2
 const url =
   "mongodb+srv://myDB:myDBpassword@data-visualization.rgwvf.mongodb.net/test?retryWrites=true&w=majority";
