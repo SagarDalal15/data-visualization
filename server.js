@@ -18,7 +18,6 @@ app.use(function (req, res, next) {
   );
   next();
 });
-
 //My code start 2
 const url =
   "mongodb+srv://myDB:myDBpassword@data-visualization.rgwvf.mongodb.net/test?retryWrites=true&w=majority";
