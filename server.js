@@ -5,7 +5,7 @@ const rawdata = require("./models/rawdata");
 const myJSON = require("./jsondata.json");
 var MongoClient = require("mongodb").MongoClient;
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 //My code start 2
 const url =
