@@ -8,16 +8,9 @@ var MongoClient = require("mongodb").MongoClient;
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+
 //My code start 2
 const url =
   "mongodb+srv://myDB:myDBpassword@data-visualization.rgwvf.mongodb.net/test?retryWrites=true&w=majority";
