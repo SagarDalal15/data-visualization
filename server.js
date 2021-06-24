@@ -29,17 +29,17 @@ const client1 = mongoose
     });
 
     client.connect((error, myClient) => {
-      // async function run() {
-      //   const collection = client.db("myDB").collection("rawdata");
-      //   const count = await collection.countDocuments();
-      //   console.log(count);
-      //   if (count < 1000) {
-      //     const res = await collection.insertMany(myJSON);
-      //     console.log("Number of entries to database: " + res.insertedCount);
-      //   }
-      //   client.close();
-      // }
-      // run().catch(console.dir);
+      async function run() {
+        const collection = client.db("myDB").collection("rawdata");
+        const count = await collection.countDocuments();
+        console.log(count);
+        if (count < 1000) {
+          const res = await collection.insertMany(myJSON);
+          console.log("Number of entries to database: " + res.insertedCount);
+        }
+        client.close();
+      }
+      run().catch(console.dir);
     });
   })
   .catch((err) => {
