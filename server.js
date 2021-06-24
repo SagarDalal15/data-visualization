@@ -6,6 +6,10 @@ const myJSON = require("./jsondata.json");
 var MongoClient = require("mongodb").MongoClient;
 
 const PORT = process.env.PORT || 4000;
+const app = express();
+
+app.use(cors());
+app.use(express.json());
 
 //My code start 2
 const url =
@@ -45,11 +49,6 @@ const client1 = mongoose
   });
 
 //My code ends 2
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
 
 // mongoose.connect(
 //   url,
