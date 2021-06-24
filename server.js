@@ -83,22 +83,22 @@ mongoose.connection.once("open", () => {
 
 app.get("/", (req, res) => {
   //my code start
-  // const client = new MongoClient(url, {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  // });
-  // client.connect(function (err, db) {
-  //   if (err) throw err;
-  //   var dbo = db.db("myDB");
-  //   dbo
-  //     .collection("rawdata")
-  //     .find()
-  //     .toArray(function (err, result) {
-  //       if (err) throw err;
-  //       res.json(result);
-  //       db.close();
-  //     });
-  // });
+  const client = new MongoClient(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  client.connect(function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("myDB");
+    dbo
+      .collection("rawdata")
+      .find()
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+        db.close();
+      });
+  });
   //my code ends
   // rawdata.find((err, rawData) => {
   //   if (err) {
