@@ -1,0 +1,10 @@
+.table {
+  width: 1122px !important;
+  height: 600px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  font-size: 11px !important;
+}
+::placeholder {
+  font-size: 14px !important;
+}

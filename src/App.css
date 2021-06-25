@@ -1,0 +1,12 @@
+.app_Table-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.app_Table {
+  margin-top: 20px;
+  width: fit-content;
+  height: 600px;
+
+  box-shadow: 2px 3px 9px -1px rgba(74, 74, 74, 0.76);
+}
