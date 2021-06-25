@@ -364,7 +364,11 @@ function Table({ columns, data }) {
         </tbody>
       </table>
       <br />
-      <div style={{ width: "1200px" }}>Showing {rows.length} results</div>
+      {data === [] ? (
+        <div style={{ width: "1200px" }}>Loading...</div>
+      ) : (
+        <div style={{ width: "1200px" }}>Showing {rows.length} results</div>
+      )}
       <div>
         <pre>{/* <code>{JSON.stringify(state.filters, null, 2)}</code> */}</pre>
       </div>
