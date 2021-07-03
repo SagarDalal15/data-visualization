@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Data visualization and filtering
 
 ## Website Link
 
 https://sagardalal15.github.io/data-visualization/
+
+<img width="1440" alt="Screenshot 2021-07-03 at 8 20 00 PM" src="https://user-images.githubusercontent.com/74422938/124358082-43e28800-dc3c-11eb-8661-f5b387fad049.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
